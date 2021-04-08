@@ -7,7 +7,11 @@ package com.atguigu.scala.chapter02
 object Scala08_DataType {
   def main(args: Array[String]): Unit = {
     var b:Byte = 128.toByte
+    var b2:Byte = 130.toByte
+    var b3:Byte = (-130).toByte
     println(b)
+    println(b2)
+    println(b3)
 
   }
 
