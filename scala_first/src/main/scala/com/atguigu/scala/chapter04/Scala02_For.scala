@@ -17,8 +17,19 @@ object Scala02_For {
     /**
       * 设置步长
       */
-    for (res : Int <- 1 to 10 by 2){
-      println(res)
+//    for (res : Int <- 1 to 10 by 2){
+//      println(res)
+
+//      for(i <- 1 to 9 ; j <- 1 to 9){
+//          println(i +"*"+ j+ "=" + i*j)
+//      }
+    for (i <- 1 to 9){
+
+      for (j <- 1 to i){
+        print(j+"*"+ i+ "=" + i*j+"\t")
+
+      }
+      println()
     }
   }
 }
