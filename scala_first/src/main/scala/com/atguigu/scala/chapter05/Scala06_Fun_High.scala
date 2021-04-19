@@ -29,5 +29,32 @@ object Scala06_Fun_High {
 
     var ff2:() => Unit = foo
     println(ff2)
+
+    //函数可以最为参数进行传递，（大多数情况下为匿名函数的形式）
+
+    //定义一个函数f0，该函数接受一个函数类型的参数f，f定义了对两个整数进行了一些操作
+    def f0(f:(Int,Int)=> Int):Int={
+        f(10,20)
+    }
+
+    def f1(a:Int,b:Int):Int={
+      a+b
+    }
+//test1
+    println(f0(f1))
+    def calculator(a: Int,b:Int,op:(Int,Int)=>Int):Int={
+      op(a,b)
+    }
+    def op(a:Int,b:Int):Int={
+      a+b
+    }
+
+    calculator(10,20,op)
+    //test2
+    println(calculator(10, 20, (a: Int, b: Int) => {
+      a - b
+    }))
   }
+
+
 }
