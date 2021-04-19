@@ -54,6 +54,8 @@ object Scala06_Fun_High {
     println(calculator(10, 20, (a: Int, b: Int) => {
       a - b
     }))
+
+    //函数可以作为返回值进行返回----函数的嵌套
   }
 
 
