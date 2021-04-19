@@ -56,6 +56,9 @@ object Scala06_Fun_High {
     }))
 
     //函数可以作为返回值进行返回----函数的嵌套 ---
+    def f2():Unit={
+      println("f2")
+    }
   }
 
 
