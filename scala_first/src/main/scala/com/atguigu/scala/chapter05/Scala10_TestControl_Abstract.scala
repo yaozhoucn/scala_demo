@@ -12,5 +12,20 @@ object Scala10_TestControl_Abstract {
    *  -名调用
    *   传递是代码块
    */
+  def main(args: Array[String]): Unit = {
+    //值传递，将函数计算后的值进行传递
+    def foo(a:Int):Int = {
+      10 + a
+    }
+
+    def f (b:Int) :Int = {
+      println("f.......")
+      b + 20
+    }
+
+    println(foo(f(10)))
+
+    //名调用：代码块
+  }
 
 }
