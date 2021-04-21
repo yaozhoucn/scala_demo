@@ -10,12 +10,14 @@ object Scala12_TestLazy {
 
     //lazy：惰性加载，函数的执行会被延后，什么时候用到结果，什么执行函数
 
-    def sum(a:Int,b:Int):Int={
-      println("sum被执行了")
-      a + b
-    }
 
-    println(sum(1, 2))
+    lazy val res: Int = sum(3,4)
+    println("1..............")
+    println("2..."+res)
+  }
+  def sum(a:Int,b:Int):Int={
+    println("sum被执行了")
+    a + b
   }
 
 }
