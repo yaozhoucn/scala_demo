@@ -25,7 +25,22 @@ object Scala10_TestControl_Abstract {
 
     println(foo(f(10)))
 
+    println("。。。。。。。。。。。。。。。。。。。。。")
+
     //名调用：代码块
+    //数据类型  int，string，函数  参数类型            =>返回值类型，代码块 把f1整体当作代码传过去
+    def fooo(a : =>Int):Unit={
+      println(a)
+      println(a)
+    }
+
+    def f1():Int={
+      println(".......f")
+      10
+    }
+
+    fooo(f1)
+    fooo(f1())
   }
 
 }
