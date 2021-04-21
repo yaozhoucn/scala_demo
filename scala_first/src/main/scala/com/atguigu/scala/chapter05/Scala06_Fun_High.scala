@@ -25,7 +25,7 @@ object Scala06_Fun_High {
     println(f())
 
     val ff = foo //将值赋值给ff
-    val ff1 = foo _ // 将函数本身作为值赋值给ff,果果明确了变量的类型，那么空格和下滑线可以省略
+    val ff1 = foo _ // 将函数本身作为值赋值给ff,如果明确了变量的类型，那么空格和下滑线可以省略
 
     var ff2:() => Unit = foo
     println(ff2)

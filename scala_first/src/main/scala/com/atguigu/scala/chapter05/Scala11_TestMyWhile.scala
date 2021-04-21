@@ -25,8 +25,26 @@ object Scala11_TestMyWhile {
         myWhile(condition)(op)
       }
     }
+    //柯里化好处1：将一个参数列表里面的多个参数拆分成为多个参数列表
+    //柯里化好处2：简化闭包代码的编写
     myWhile(n >= 1){
       println("mywhile - ->"+ n)
+      n -=1
+    }
+
+    //使用闭包实现没有while循环
+    //def mywhile2():(参数类型代码块) => 返回值类型
+    def myWhile2(conditon: Boolean) : ( =>Unit ) =>Unit={
+      def ff(op: => Unit) : Unit = {
+        if (conditon){
+          myWhile2(conditon)
+          op
+        }
+      }
+      ff _
+    }
+    myWhile2(n>=1){
+      println("mywhile -- "+n)
       n -=1
     }
   }
