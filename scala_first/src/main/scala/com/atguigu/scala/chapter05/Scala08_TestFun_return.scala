@@ -2,6 +2,7 @@ package com.atguigu.scala.chapter05
 
 /**
   * Created by WXHang on HANG at 2021/4/20 11:12
+  * desc ： 柯里化
   */
 object Scala08_TestFun_return {
   def main(args: Array[String]): Unit = {
