@@ -19,6 +19,7 @@ object Scala01_TestObject {
     val std:Student01 = new Student01()
     println(std.name)
     std.study()
+    shareMethod()
   }
   class Student01{
     var name:String = "cangcang"
