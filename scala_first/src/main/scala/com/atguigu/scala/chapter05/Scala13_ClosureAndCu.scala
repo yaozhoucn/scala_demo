@@ -20,6 +20,7 @@ object Scala13_ClosureAndCu {
     //调用f1，返回值是f2
     //声明一个名为ff的常量，返回值是Int => Int ,返回值类型为函数，函数主要包括两个
     //部分，参数与返回值，在int => int 中，参数为int类型，返回值为int类型的函数
+    //val ff: Int => Int = f1()
     val ff: Int => Int = f1()
 
     println(ff(20))
@@ -30,7 +31,11 @@ object Scala13_ClosureAndCu {
       var a:Int = 2
       a + b
     }
+    //柯里化转化的效果
     def ff2()={
+              //int = > int 中，
+              // 第二个int为(b:int)=>a+b的返回值类型，
+              // 第一个int为函数的参数类型由（b:int）决定
       var a:Int = 10
           //(b:int)类似为一个函数
       (b:Int) => a+b
