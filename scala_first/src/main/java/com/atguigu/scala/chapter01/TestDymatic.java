@@ -25,7 +25,7 @@ public class TestDymatic {
         System.out.println(tea.name);
         tea.hello();
 
-        //编译看左，运行看右
+        //编译看左(属性绑定)，运行看右(方法动态绑定)
         //tea.sayHi();
     }
 }
