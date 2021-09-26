@@ -2,6 +2,15 @@ package com.atguigu.scala.chapter01
 
 /**
   * Created by WXHang on HANG at 2021/4/7 9:44
+  *
+  *
+  *
+  *
+  *object 名称:从语法角度讲，上面语法表示声明了一个伴生对象
+  *
+  * 伴生对象
+  * 伴随类产生的一个对象
+  * 当我们对源文件进行编译之后，默认会生成两个字节码文件，一个是伴生类，另一个是伴生对象所属类
   */
 object Scala01_HelloWorld {
   def main(args: Array[String]): Unit = {
