@@ -12,5 +12,4 @@ package object chapter06 {
   def shareMethod():Unit={
     println(s"${shareVla}共享方法")
   }
-
 }
