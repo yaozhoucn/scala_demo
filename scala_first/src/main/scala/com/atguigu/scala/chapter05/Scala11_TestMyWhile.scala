@@ -22,6 +22,7 @@ object Scala11_TestMyWhile {
     def myWhile(condition: => Boolean)(op: => Unit ):Unit={
       if (condition){
         op
+        //递归调用myWhile
         myWhile(condition)(op)
       }
     }
