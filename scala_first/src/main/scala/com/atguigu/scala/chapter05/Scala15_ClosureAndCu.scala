@@ -18,6 +18,10 @@ object Scala15_ClosureAndCu {
     //调用f1，返回的是f2,此处 2 为f2（2）传值参数
     var ff = f1()(2)
     println(ff)
+
+    //返回值为函数类型（函数包括参数和返回值int:int）：ff为参数为int类型，返回值为int类型的函数，这个函数是f1（）执行完毕后返回的结果；
+    var ff2: Int => Int = f1()
+    println(ff2)
   }
 
 }
