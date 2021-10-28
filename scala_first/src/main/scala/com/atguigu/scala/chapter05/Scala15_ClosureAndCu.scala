@@ -38,6 +38,12 @@ object Scala15_ClosureAndCu {
     }
 
     println(ff1(1)(2))
+    val ff4: Int = ff
+
+
+    def ff5(a:Int)={
+      (b:Int) => a + b
+    }
   }
 
 
