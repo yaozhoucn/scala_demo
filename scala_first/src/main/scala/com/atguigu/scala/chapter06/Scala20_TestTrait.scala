@@ -46,4 +46,14 @@ class MyOperation20_1 extends HDFSOperation with DBOperation {
     //这个时候super不是调用父类中的方法了，而是调用特质叠加顺序下一个节点的方法
     "我的操作是："+ super.describe()
   }
+
+  /**
+    * 特质的叠加顺序
+    * 第一步：列出第一个混入特质的继承关系，作为临时叠加的顺序
+    *      DBOperation-->OPeration
+    * 第二步：列出第二个混入特质的继承关系，并且该顺序放到临时叠加顺序的前面，已经出现的特质不再出现
+    *       HDFSOperation --> OPeration   DBOperation-->OPeration
+    *
+    *       ===> HDFSOperation->DBOperation->OPeration
+    */
 }
