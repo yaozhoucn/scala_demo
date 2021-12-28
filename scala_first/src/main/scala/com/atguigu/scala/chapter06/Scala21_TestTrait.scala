@@ -21,8 +21,10 @@ trait TraitA3{
   }
 }
 trait UserDao{
+  //依赖注入scala固定写法，引入特质TraitA3
   _:TraitA3 =>
   def insert(user:User):Unit={
+    m1()
     println("insert into dataDB + " + user.name)
   }
 }
