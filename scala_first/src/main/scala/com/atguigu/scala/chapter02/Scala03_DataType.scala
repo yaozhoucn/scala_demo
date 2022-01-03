@@ -5,7 +5,7 @@ package com.atguigu.scala.chapter02
   */
 object Scala03_DataType {
   def main(args: Array[String]): Unit = {
-    var b:Byte = 10 + 20;
+    var b:Int = 10 + 20;
     println(b)
 
     val name="James"
