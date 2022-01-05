@@ -46,6 +46,20 @@ object Scala01_TestArray {
 
     //方式5：用指定的字符串连接数组中的元素，形成新的字符串
     println(array.mkString("*"))
+
+    //往数据中添加元素
+    //因为Array是不可变数组，所以在执行添加操作的时候，会创建新的数组对象
+    val ints: Array[Int] = array.+:(30)
+    println(ints.mkString("--"))
+
+    val ints1: Array[Int] = array.:+(40)
+    println(ints1.mkString("__"))
+    //在Scala语言中，如果运算方法中包含冒号，并且冒号在后，运算顺序为从左到右；
+
+    //简写
+    val ints2: Array[Int] = 40 +: ints1
+    println(ints2.mkString("--"))
+
   }
 
 
