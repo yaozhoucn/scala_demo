@@ -1,5 +1,6 @@
 package com.atguigu.scala.chapter07
 
+import scala.collection.mutable
 import scala.collection.mutable.ArrayBuffer
 
 /**
@@ -48,5 +49,11 @@ object Scala02_TestArrayBuffer {
     //从1的位置开始删除，删除的个数为2个
     arrayBuffer.remove(1,2)
     println(arrayBuffer)
+
+    //可变的数据转换为不可变数组
+    val toArray: Array[Int] = ints.toArray
+    //不可变转换为可变
+    val toBuffer: mutable.Buffer[Int] = toArray.toBuffer
+    println(toBuffer)
   }
 }
