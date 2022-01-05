@@ -29,9 +29,24 @@ object Scala02_TestArrayBuffer {
       print(elem+"**")
     }*/
 
-    //向数组中添加元素
+    //向数组中添加元素 建议：在操作集合的时候，不可变用符号，可变用方法
     val value:ArrayBuffer[Int]= arrayBuffer.+=(40)
-    println(arrayBuffer.mkString("--"))
+    //println(arrayBuffer.mkString("--"))
+    arrayBuffer.append(100)
+
+    arrayBuffer.insert(2,89)
     println(value.mkString("**"))
+
+    //注意:并不是数据是可变的，在操作数据对象的时候，就不能创建新的数组对象了。也可以调用相关方法，去创建新的对象
+    val ints: ArrayBuffer[Int] = arrayBuffer.+:(30)
+    //创建了新的数据ints
+    println(ints)
+
+    //删除数组中的函数
+    arrayBuffer.remove(2)
+    println(arrayBuffer)
+    //从1的位置开始删除，删除的个数为2个
+    arrayBuffer.remove(1,2)
+    println(arrayBuffer)
   }
 }
