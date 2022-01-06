@@ -4,7 +4,7 @@ import scala.collection.mutable
 
 /**
  * Created by WXHang on HANG at 2022/1/6 17:36
- * desc:set集合
+ * set集合
  * desc:无序的，不能重复
  */
 object Scala06_TestSet {
