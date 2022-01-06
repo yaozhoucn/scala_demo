@@ -28,6 +28,7 @@ object Scala04_TestList {
     val list3: List[Int] = list1 ::: list2
     println(list3)
     println(list3(4))
+    list3.foreach(println(_))
   }
 
 }
