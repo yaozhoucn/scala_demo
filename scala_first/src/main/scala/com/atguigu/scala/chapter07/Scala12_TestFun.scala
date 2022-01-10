@@ -3,7 +3,7 @@ package com.atguigu.scala.chapter07
 /**
   * @Author: HANG
   * @Date: 2022/1/10 20:22
-  * @Desc:
+  * @Desc:  集合计算高级函数
   */
 object Scala12_TestFun {
   def main(args: Array[String]): Unit = {
