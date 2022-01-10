@@ -35,6 +35,9 @@ val ints: List[Int] = ints1.union(ints2)
 //    （11）拉链 注:如果两个集合的元素个数不相等，那么会将同等数量的数据进行拉链，多余的数据省略不用（两两配对）
     println(ints1.zip(ints2))
 //    （12）滑窗
-    ints1.sliding(2,5).foreach(println)
+    for (elem <- ints1.sliding(3)) {
+      println(elem)
+    }
+    ints1.sliding(3,1).foreach(println)
   }
 }
