@@ -13,7 +13,8 @@ package com.atguigu.scala.chapter07
 object Scala13_TestFun {
   def main(args: Array[String]): Unit = {
     val list = List(1, 2, 3, 4)
-    //println(list.reduce((x, y) => x - y))
+    //简化(归约)
+    println(list.reduce((x, y) => x - y))
     val res: Int = list.reduceLeft((a: Int, b: Int) => {
       a + b
     })
@@ -22,6 +23,19 @@ object Scala13_TestFun {
     println(list.reduceRight(_ + _))
     println(list.reduceLeft(_ - _)) //-8
     println(list.reduceRight(_ - _)) //-2
+
+    val list2: List[Int] = List(3, 4, 7, 9)
+    val res2: Int = list2.reduceRight((a: Int, b: Int) => {
+      a - b
+    })
+    println(res2)
+
+    //折叠
+    println(list.fold(10)((a:Int,b:Int) => {a+b}))
+    // List(4,3,2,1)
+    //4-5 = -1 3-(-1)=4 2-4=-2 1-(-2) =3
+    println(list.foldRight(5)(_ - _))
+
   }
 
 }
