@@ -20,11 +20,8 @@ object Scala13_TestFun {
     println(res)
     println(list.reduceLeft(_ + _))
     println(list.reduceRight(_ + _))
-    list.reduce((a:Int, b:Int)  => {
-      while(a != 4){
-        a + b
-      }
-    })
+    println(list.reduceLeft(_ - _)) //-8
+    println(list.reduceRight(_ - _)) //-2
   }
 
 }
