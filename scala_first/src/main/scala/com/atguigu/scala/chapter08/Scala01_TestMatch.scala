@@ -20,5 +20,17 @@ object Scala01_TestMatch {
       case _ => "illegal"
     }
     println(result)
+
+    //模式守卫：通过模式首位，求一个整数的绝对值
+    def abs(x: Int) = x match {
+
+      //定义一个变量对传入的x进行接受
+      case i:Int if i >= 0 => i
+      case j:Int if j < 0 => -j
+      case _ => "error"
+    }
+
+    println(abs(-5))
+
   }
 }
