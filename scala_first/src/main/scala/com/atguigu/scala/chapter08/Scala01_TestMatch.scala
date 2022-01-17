@@ -10,6 +10,8 @@ object Scala01_TestMatch {
     var b:Int = 20
     var operator:Char = '+'
 
+    //模式匹配是有返回值
+    //模式匹配中没有break关键字，case分支执行结束后直接跳出
     val result: Any = operator match {
       case '+' => a + b
       case '-' => a - b
