@@ -13,7 +13,7 @@ package com.atguigu.scala.chapter07
 object Scala13_TestFun {
   def main(args: Array[String]): Unit = {
     val list = List(1, 2, 3, 4)
-    //简化(归约)
+    //简化(归约)：对集合内部元素之间进行聚合
     println(list.reduce((x, y) => x - y))
     val res: Int = list.reduceLeft((a: Int, b: Int) => {
       a + b
