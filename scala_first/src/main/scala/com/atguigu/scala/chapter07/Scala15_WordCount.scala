@@ -37,11 +37,19 @@ object Scala15_WordCount {
     //3.计算相同单词的个数
     val stringToInt: Map[String, Int] = wordsMap.map(kv => (kv._1, kv._2.size))
     //4.进行排序
-    val sortWords: List[(String, Int)] = stringToInt.toList.sortWith((x, y) => {
+    /*val sortWords: List[(String, Int)] = stringToInt.toList.sortWith((x, y) => {
       x._2 > y._2
-    })
+    })*/
+    val sortList: List[(String, Int)] = stringToInt.toList.sortBy(elem => {
+      elem._2
+    }).reverse
+    stringToInt.toList.sortBy((t:(String,Int))=>{t._2}).foreach(print)
+    println(sortList)
     //5.取前三名
-    println(sortWords.take(3))
+    println(sortList.take(3))
+
+
+
 
   }
 
