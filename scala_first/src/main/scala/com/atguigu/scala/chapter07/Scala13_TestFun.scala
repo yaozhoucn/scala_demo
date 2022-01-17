@@ -30,7 +30,7 @@ object Scala13_TestFun {
     })
     println(res2)
 
-    //折叠
+    //折叠 : 化简的一种特殊情况
     println(list.fold(10)((a:Int,b:Int) => {a+b}))
     // List(4,3,2,1)
     //4-5 = -1 3-(-1)=4 2-4=-2 1-(-2) =3
