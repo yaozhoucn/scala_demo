@@ -15,7 +15,7 @@ object Scala15_WordCount2 {
     //2.将list分组
     val groupWord: Map[String, List[String]] = stringList.groupBy(word => word)
     //println(groupWord)
-    //3.计算相同单词的个数
+    //3.计算相同单词的个数,使用map进行映射
     val mapWord: Map[String, Int] = groupWord.map(elem => {
       (elem._1, elem._2.size)
     })
