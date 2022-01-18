@@ -52,7 +52,51 @@ object Scala02_TestMatch {
         case Array(0, _*) => "以0开头的数组" //匹配以0开头和数组
         case _ => "something else"
       }
-      println("result = " + result)
+      //println("result = " + result)
+    }
+
+
+    //匹配列表
+    //list是一个存放List集合的数组
+    //请思考，如果要匹配 List(88) 这样的只含有一个元素的列表,并原值返回.应该怎么写
+    for (list <- Array(List(0), List(1, 0), List(0, 0, 0), List(1, 0, 0), List(88))) {
+
+      val result2 = list match {
+
+        case List(0) => "0" //匹配List(0)
+        case List(x, y) => x + "," + y //匹配有两个元素的List
+        case List(0, _*) => "0 ..."
+        case List(x) => x
+        case _ => "something else"
+      }
+
+      //println(result2)
+    }
+
+
+    //匹配列表  方式2
+    val list: List[Int] = List(1, 2, 5, 6, 7)
+
+    list match {
+      // :: 代表往集合里面添加元素
+      case first :: second :: rest => println(first + "-" + second + "-" + rest)
+      case _ => println("something else")
+    }
+
+
+
+    //匹配元组
+    for (tuple <- Array((0, 1), (1, 0), (1, 1), (1, 0, 2))) {
+      //对一个元组集合进行遍历
+
+      val result = tuple match {
+        case (0, _) => "0 ..." //是第一个元素是0的元组
+        case (y, 0) => "" + y + "0" // 匹配后一个元素是0的对偶元组
+        case (a, b) => "" + a + " " + b
+        case _ => "something else" //默认
+
+      }
+      println(result)
     }
   }
 
