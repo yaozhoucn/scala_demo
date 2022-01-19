@@ -49,7 +49,7 @@ object Scala03_TestMatch {
     //简化
 
     //1.如果匿名函数中，使用模式匹配case，必须使用花括号 {} 括起来
-    //2.如果一个函数列表中只有一个参数，那么参数列表的小括号（）可以花括号{}代替
+    //2.如果一个函数的参数列表中只有一个参数，那么参数列表的小括号（）可以花括号{}代替
     val newList2: List[(String, Int)] = list.map {
       case (word, count) => (word, count * 2)
     }
@@ -58,7 +58,7 @@ object Scala03_TestMatch {
     //特殊匹配 4
     var list1 = List(("a", ("a", 1)), ("b", ("b", 2)), ("c", ("c", 3)))
     val list2: List[(String, (String, Int))] = list1.map {
-      case (groupkey, (word, count)) => (groupkey, (word, count * 2))
+      case (key, (word, count)) => (key, (word, count * 2))
     }
     println(list2)
   }
