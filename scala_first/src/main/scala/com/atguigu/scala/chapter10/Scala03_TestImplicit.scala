@@ -35,7 +35,7 @@ trait PersonTrait {
 }
 
 object PersonTrait {
-  // 隐式类 : 类型1 => 类型2
+  // 隐式类 : 类型1 => 类型2 把Teacher对象转化成一个Person对象
   implicit class Person5(user:Teacher) {
 
     def say(): Unit = {
