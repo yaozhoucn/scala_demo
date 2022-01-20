@@ -36,6 +36,8 @@ trait PersonTrait {
 
 object PersonTrait {
   // 隐式类 : 类型1 => 类型2 把Teacher对象转化成一个Person对象
+
+  //相当于动态扩展功能
   implicit class Person5(user:Teacher) {
 
     def say(): Unit = {
