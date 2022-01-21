@@ -35,10 +35,18 @@ object Scala01_TestGeneric {
     var s2:MyList[Child] = new MyList[Parent]
     //var s:MyList[Child] = new MyList[SubChild]
     test(classOf[Child])
+    test2(classOf[SubChild])
+    //test2(classOf[Parent])
+
   }
 
   //泛型通配符:  下界 A 只能是child或者child的父类
   def test[A >: Child](a:Class[A]):Unit={
+    println(a)
+  }
+
+  //泛型通配符:  上界 A 只能是child或者child的子类
+  def test2[A <: Child](a:Class[A]):Unit={
     println(a)
   }
 
