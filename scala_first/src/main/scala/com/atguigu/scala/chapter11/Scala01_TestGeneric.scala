@@ -37,7 +37,6 @@ object Scala01_TestGeneric {
     test(classOf[Child])
     test2(classOf[SubChild])
     //test2(classOf[Parent])
-
   }
 
   //泛型通配符:  下界 A 只能是child或者child的父类
