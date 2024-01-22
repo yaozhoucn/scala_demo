@@ -38,6 +38,6 @@ val ints: List[Int] = ints1.union(ints2)
     for (elem <- ints1.sliding(3)) {
       println(elem)
     }
-    ints1.sliding(3,1).foreach(println)
+    ints1.sliding(3,2).foreach(println)
   }
 }
